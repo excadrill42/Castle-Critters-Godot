@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://d0jo0pbcp1rgt"]
+
+[ext_resource type="Script" uid="uid://deo4kxrwyl5d3" path="res://level_container_ui.gd" id="1_2l2mk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a160n"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2l2mk"]
+bg_color = Color(0, 0.6, 0.6, 1)
+
+[node name="LevelContainerUI" type="CanvasLayer" unique_id=725558928]
+script = ExtResource("1_2l2mk")
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=2085956151]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -233.5
+offset_top = 25.0
+offset_right = 233.5
+offset_bottom = 48.0
+grow_horizontal = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_a160n")
+theme_override_styles/fill = SubResource("StyleBoxFlat_2l2mk")
+show_percentage = false
+
+[node name="Label" type="Label" parent="." unique_id=19608068]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -27.0
+offset_top = 25.0
+offset_right = 27.0
+offset_bottom = 48.0
+grow_horizontal = 2
+text = "Level 0"

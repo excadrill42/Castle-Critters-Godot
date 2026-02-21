@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bv6r5x26wt58k"]
 
 [ext_resource type="PackedScene" uid="uid://dj11t1dlejvxp" path="res://animation_scene.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://d0jo0pbcp1rgt" path="res://level_container_ui.tscn" id="3_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://bb8l5daew2v2s" path="res://main_ui_test.tscn" id="3_h2yge"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ig7tw"]
@@ -20,3 +21,5 @@ position = Vector2(576.00006, 266.00003)
 scale = Vector2(1.35, 1.35)
 texture = SubResource("CompressedTexture2D_ig7tw")
 metadata/_edit_lock_ = true
+
+[node name="LevelContainerUI" parent="." unique_id=725558928 instance=ExtResource("3_1bvp3")]
