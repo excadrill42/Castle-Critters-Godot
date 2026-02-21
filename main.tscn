@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://8n0dh1bqsrr2"]
+
+[ext_resource type="Script" uid="uid://dq78k50cjtbfy" path="res://main.gd" id="1_ig7tw"]
+[ext_resource type="Texture2D" uid="uid://ojr3m363ykme" path="res://Images/Farm.jpg" id="2_0xm2m"]
+
+[node name="Main" type="Node2D" unique_id=1326734331]
+script = ExtResource("1_ig7tw")
+
+[node name="Background" type="CanvasLayer" parent="." unique_id=293841992]
+
+[node name="Sprite2D" type="Sprite2D" parent="Background" unique_id=601345429]
+position = Vector2(575, 360)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_0xm2m")
