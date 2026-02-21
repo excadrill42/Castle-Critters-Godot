@@ -49,4 +49,15 @@ visible = false
 layout_mode = 2
 text = "Next"
 
+[node name="NewTaskButton" type="Button" parent="." unique_id=1210107233]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -31.0
+offset_right = 83.0
+grow_vertical = 0
+size_flags_horizontal = 4
+text = "New Task"
+
 [connection signal="pressed" from="VBoxContainer/NextButton" to="." method="_on_next_button_pressed"]
+[connection signal="pressed" from="NewTaskButton" to="." method="_on_new_task_button_pressed"]

@@ -10,8 +10,7 @@ extends CanvasLayer
 func _ready():
 		print(calculate_button)
 		calculate_button.pressed.connect(_on_calculate_pressed)
-		if (username_on == false):
-			$VBoxContainer/UsernameInput.hide()
+		$NewTaskButton.hide()
 		
 func _on_calculate_pressed():
 	if (username_on == true):
@@ -43,7 +42,21 @@ func _on_calculate_pressed():
 	username_on = false
 	
 	get_node("VBoxContainer/NextButton").show()
+	get_node("VBoxContainer/CalculateButton").hide()
 
 
 func _on_next_button_pressed() -> void:
 	get_node("VBoxContainer").hide()
+	$NewTaskButton.show()
+
+
+func _on_new_task_button_pressed() -> void:
+	$VBoxContainer.show()
+	calculate_button.show()
+	username_input.hide()
+	$NewTaskButton.hide()
+	$VBoxContainer/NextButton.hide()
+	task_length_input.text = ""
+	$VBoxContainer/TaskNameInput.text = ""
+	$VBoxContainer/LevelLabel.text = "Level will appear here."
+	$VBoxContainer/TasksLeftLabel.text = "Tasks remaining will appear here"
