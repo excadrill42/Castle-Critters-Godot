@@ -13,8 +13,8 @@ z_index = -1
 [node name="Background" type="CanvasLayer" parent="." unique_id=293841992]
 
 [node name="Sprite2D" type="Sprite2D" parent="Background" unique_id=601345429]
-position = Vector2(575, 360)
-scale = Vector2(0.6, 0.6)
+position = Vector2(576.00006, 266.00003)
+scale = Vector2(1.35, 1.35)
 texture = SubResource("CompressedTexture2D_ig7tw")
 
 [node name="MainUI" parent="." unique_id=990377633 instance=ExtResource("3_h2yge")]
