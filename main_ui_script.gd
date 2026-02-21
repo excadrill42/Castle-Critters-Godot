@@ -3,7 +3,6 @@ extends CanvasLayer
 @onready var username_input = $VBoxContainer/UsernameInput
 @onready var calculate_button = $VBoxContainer/CalculateButton
 @onready var level_label = $VBoxContainer/LevelLabel
-@onready var tasks_left_label = $VBoxContainer/TasksLeftLabel
 @onready var username_on = true
 
 func _ready():
@@ -16,10 +15,16 @@ func _ready():
 func _on_calculate_pressed():
 	if (username_on == true):
 		Global.username = username_input.text.strip_edges()
-
-		if Global.username == "":
-			level_label.text = "Please enter a username."
-			return
+	var minutes = int($VBoxContainer/TaskLengthInput.text)
+		
+	if minutes <= 0:
+		minutes = 1
+	
+	Global.task_length_input = minutes
+	get_tree().change_scene_to_file("res://Timer.tscn")
+	if Global.username == "":
+		level_label.text = "Please enter a username."
+		return
 
 
 	if not $VBoxContainer/TaskLengthInput.text.is_valid_int():
