@@ -1,10 +1,10 @@
 extends Control
 
-@onready var username_input = $VBoxContainer/UsernameInput
-@onready var task_length_input = $VBoxContainer/TaskLengthInput
-@onready var calculate_button = get_node("VBoxContainer/CalculateButton")
-@onready var level_label = $VBoxContainer/LevelLabel
-@onready var tasks_left_label = $VBoxContainer/TasksLeftLabel
+@onready var username_input = $MainUI/VBoxContainer2/UsernameInput
+@onready var task_length_input = $MainUI/VBoxContainer2/TaskLengthInput
+@onready var calculate_button = get_node("MainUI/VBoxContainer2/CalculateButton")
+@onready var level_label = $MainUI/VBoxContainer2/LevelLabel
+@onready var tasks_left_label = $MainUI/VBoxContainer2/TasksLeftLabel
 
 var tasks_completed = 2
 var tasks_total = 10
