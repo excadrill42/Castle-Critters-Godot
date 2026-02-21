@@ -49,4 +49,6 @@ visible = false
 layout_mode = 2
 text = "Next"
 
+[node name="CountdownTimer" type="Timer" parent="." unique_id=1405771667]
+
 [connection signal="pressed" from="VBoxContainer/NextButton" to="." method="_on_next_button_pressed"]
