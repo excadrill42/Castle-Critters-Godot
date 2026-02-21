@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://8n0dh1bqsrr2"]
+[gd_scene format=3 uid="uid://bv6r5x26wt58k"]
 
-[ext_resource type="Script" uid="uid://dq78k50cjtbfy" path="res://main.gd" id="1_ig7tw"]
+[ext_resource type="Script" path="res://root.gd" id="1_ig7tw"]
 [ext_resource type="Texture2D" uid="uid://ojr3m363ykme" path="res://Images/Farm.jpg" id="2_0xm2m"]
 
 [node name="Main" type="Node2D" unique_id=1326734331]
