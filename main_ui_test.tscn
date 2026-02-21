@@ -34,7 +34,7 @@ virtual_keyboard_type = 2
 
 [node name="CalculateButton" type="Button" parent="VBoxContainer" unique_id=361393583]
 layout_mode = 2
-text = "Calculate"
+text = "Submit"
 
 [node name="LevelLabel" type="Label" parent="VBoxContainer" unique_id=635707030]
 layout_mode = 2
