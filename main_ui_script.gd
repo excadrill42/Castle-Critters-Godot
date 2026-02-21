@@ -5,17 +5,20 @@ extends CanvasLayer
 @onready var calculate_button = $VBoxContainer/CalculateButton
 @onready var level_label = $VBoxContainer/LevelLabel
 @onready var tasks_left_label = $VBoxContainer/TasksLeftLabel
+@onready var username_on = true
 
 func _ready():
 		print(calculate_button)
 		calculate_button.pressed.connect(_on_calculate_pressed)
 		
 func _on_calculate_pressed():
-	Global.username = username_input.text.strip_edges()
+	if (username_on == true):
+		Global.username = username_input.text.strip_edges()
 
-	if Global.username == "":
-		level_label.text = "Please enter a username."
-		return
+		if Global.username == "":
+			level_label.text = "Please enter a username."
+			return
+
 
 	if not task_length_input.text.is_valid_int():
 		level_label.text = "Please enter a valid number."

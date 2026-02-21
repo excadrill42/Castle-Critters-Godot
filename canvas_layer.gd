@@ -2,7 +2,7 @@ extends CanvasLayer
 
 
 @onready var input_field = $Panel/VBoxContainer/LineEdit
-@onready var add_button = $Panel/VBoxContainer/Button
+@onready var add_button = $Button
 @onready var task_list = $Panel/VBoxContainer/ScrollContainer/VBoxContainer
 
 func _ready():
