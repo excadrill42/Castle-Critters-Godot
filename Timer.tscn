@@ -12,13 +12,19 @@ grow_vertical = 2
 script = ExtResource("1_7jo7d")
 
 [node name="CountdownTimer" type="Timer" parent="." unique_id=1391503663]
+one_shot = true
 
 [node name="TimeLabel" type="Label" parent="." unique_id=837122245]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -169.0
+offset_bottom = 214.0
+grow_horizontal = 0
 theme_override_colors/font_color = Color(0.03910804, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 0.9804955, 0.978059, 1)
+theme_override_font_sizes/font_size = 60
 text = "Timer"
 horizontal_alignment = 2
-vertical_alignment = 1
+vertical_alignment = 2
