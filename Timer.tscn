@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://1lxtt05bllfa"]
+
+[ext_resource type="Script" uid="uid://clus76rxqo3kj" path="res://timer_script.gd" id="1_7jo7d"]
+
+[node name="Node" type="Control" unique_id=100528274]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7jo7d")
+
+[node name="CountdownTimer" type="Timer" parent="." unique_id=1391503663]
+
+[node name="TimeLabel" type="Label" parent="." unique_id=837122245]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0.03910804, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 0.9804955, 0.978059, 1)
+text = "Timer"
+horizontal_alignment = 2
+vertical_alignment = 1
