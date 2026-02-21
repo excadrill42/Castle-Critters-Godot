@@ -1,7 +1,6 @@
 extends CanvasLayer
 
 @onready var username_input = $VBoxContainer/UsernameInput
-@onready var task_length_input = $VBoxContainer/TaskLengthInput
 @onready var calculate_button = $VBoxContainer/CalculateButton
 @onready var level_label = $VBoxContainer/LevelLabel
 @onready var tasks_left_label = $VBoxContainer/TasksLeftLabel
@@ -23,11 +22,11 @@ func _on_calculate_pressed():
 			return
 
 
-	if not task_length_input.text.is_valid_int():
+	if not Global.task_length_input.text.is_valid_int():
 		level_label.text = "Please enter a valid number."
 		return
 
-	var task_length = int(task_length_input.text)
+	var task_length = int(Global.task_length_input.text)
 	var tasks_left = Global.tasks_total - Global.tasks_completed
 
 	var tasks_completed_value = round(task_length * 0.333)
@@ -59,7 +58,7 @@ func _on_new_task_button_pressed() -> void:
 	username_input.hide()
 	$NewTaskButton.hide()
 	$VBoxContainer/NextButton.hide()
-	task_length_input.text = ""
+	Global.task_length_input.text = ""
 	$VBoxContainer/TaskNameInput.text = ""
 	$VBoxContainer/LevelLabel.text = "Level will appear here."
 	$VBoxContainer/TasksLeftLabel.text = "Tasks remaining will appear here"
