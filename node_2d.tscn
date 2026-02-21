@@ -1,9 +1,16 @@
 [gd_scene format=3 uid="uid://eeviyqx8rvh"]
 
 [ext_resource type="Texture2D" uid="uid://clfg7wnuiol72" path="res://Images/key.png" id="1_wtcfe"]
+[ext_resource type="Script" uid="uid://dr2ha0ogldd0o" path="res://progress_bar.gd" id="2_epypp"]
+[ext_resource type="PackedScene" uid="uid://c2htgiqef43wa" path="res://xp_bar.tscn" id="3_epypp"]
 
 [node name="Key" type="Node2D" unique_id=198253035]
 
 [node name="Key" type="Sprite2D" parent="." unique_id=969144260]
 position = Vector2(593, 373)
 texture = ExtResource("1_wtcfe")
+
+[node name="Progress Bar" type="Node2D" parent="." unique_id=1741354005]
+script = ExtResource("2_epypp")
+
+[node name="XPBar" parent="." unique_id=778914665 instance=ExtResource("3_epypp")]
