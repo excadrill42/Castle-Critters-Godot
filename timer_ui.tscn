@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://civy5g15fvktc"]
+
+[ext_resource type="Script" uid="uid://cdhruvdv3px5x" path="res://timer_ui.gd" id="1_40xfn"]
+
+[node name="TimerUI" type="CanvasLayer" unique_id=1065506238]
+script = ExtResource("1_40xfn")
+
+[node name="TimerDisplay" type="Label" parent="." unique_id=770297550]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -23.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 32
+text = "Time"
+
+[node name="Timer" type="Timer" parent="." unique_id=370360704]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
