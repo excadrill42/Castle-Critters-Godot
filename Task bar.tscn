@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dd3pcf5q4y3er"]
+
+[ext_resource type="Script" uid="uid://d0lyre5m805l7" path="res://canvas_layer.gd" id="1_oxw0q"]
+
+[node name="Node2D" type="Node2D" unique_id=1628532696]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=566227389]
+script = ExtResource("1_oxw0q")
+
+[node name="Button" type="Button" parent="CanvasLayer" unique_id=1694748943]
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="TextEdit" type="TextEdit" parent="CanvasLayer" unique_id=857534063]
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer" unique_id=1621637861]
+offset_right = 40.0
+offset_bottom = 40.0
