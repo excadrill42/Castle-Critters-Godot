@@ -34,3 +34,9 @@ func _on_calculate_pressed():
 
 	level_label.text = Global.username + " is level " + str(Global.level) + "!"
 	tasks_left_label.text = "Tasks left: " + str(tasks_left)
+	
+	get_node("VBoxContainer/NextButton").show()
+
+
+func _on_next_button_pressed() -> void:
+	get_node("VBoxContainer").hide()
