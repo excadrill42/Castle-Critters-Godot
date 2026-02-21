@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://8n0dh1bqsrr2"]
 
-[ext_resource type="Script" uid="uid://dq78k50cjtbfy" path="res://main.gd" id="1_ig7tw"]
+[ext_resource type="Script" path="res://main.gd" id="1_ig7tw"]
 [ext_resource type="Texture2D" uid="uid://ojr3m363ykme" path="res://Images/Farm.jpg" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://bb8l5daew2v2s" path="res://main_ui_test.tscn" id="3_h2yge"]
 
@@ -16,3 +16,18 @@ scale = Vector2(0.6, 0.6)
 texture = ExtResource("2_0xm2m")
 
 [node name="MainUI" parent="." unique_id=990377633 instance=ExtResource("3_h2yge")]
+
+[node name="LevelContainer" type="HBoxContainer" parent="MainUI" unique_id=1008242270]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+theme_override_constants/separation = 10
+
+[node name="XPBar" type="ProgressBar" parent="MainUI/LevelContainer" unique_id=1322986761]
+layout_mode = 2
+
+[node name="LevelLabel" type="Label" parent="MainUI/LevelContainer" unique_id=1110255953]
+layout_mode = 2
