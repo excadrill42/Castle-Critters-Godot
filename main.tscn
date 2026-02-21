@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://bv6r5x26wt58k"]
 
+[ext_resource type="PackedScene" uid="uid://dj11t1dlejvxp" path="res://animation_scene.tscn" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://bb8l5daew2v2s" path="res://main_ui_test.tscn" id="3_h2yge"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ig7tw"]
@@ -8,11 +9,14 @@ load_path = "res://.godot/imported/pixil-frame-0 (1).png-5962cef2b3fe40c54bcf0b5
 [node name="Main" type="Node2D" unique_id=1326734331]
 z_index = -1
 
-[node name="Background" type="CanvasLayer" parent="." unique_id=293841992]
+[node name="MainUI" parent="." unique_id=990377633 instance=ExtResource("3_h2yge")]
+layer = 2
 
-[node name="Sprite2D" type="Sprite2D" parent="Background" unique_id=601345429]
+[node name="Animation Scene" parent="." unique_id=1608497283 instance=ExtResource("2_0xm2m")]
+
+[node name="Background" type="Sprite2D" parent="." unique_id=601345429]
+z_index = -2
 position = Vector2(576.00006, 266.00003)
 scale = Vector2(1.35, 1.35)
 texture = SubResource("CompressedTexture2D_ig7tw")
-
-[node name="MainUI" parent="." unique_id=990377633 instance=ExtResource("3_h2yge")]
+metadata/_edit_lock_ = true
