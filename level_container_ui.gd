@@ -25,6 +25,10 @@ func task_completed():
 
 func level_up():
 	Global.level += current_xp / xp_needed
+	if (Global.level > 0):
+		Global.level_1()
+	if (Global.level > 1):
+		Global.level_2()
 	current_xp = current_xp % xp_needed
 	$Label.text = "Level: " + str(Global.level)
 	$ProgressBar.value = current_xp
