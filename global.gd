@@ -1,7 +1,7 @@
 extends Node
 
 @onready var tasks_completed = 2
-@onready var task_length_input = 5
+@onready var task_length_input = 0
 @onready var tasks_total = 10
 @onready var level = 0
 @onready var username = 0

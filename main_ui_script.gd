@@ -22,23 +22,14 @@ func _on_calculate_pressed():
 			return
 
 
-	if not Global.task_length_input.text.is_valid_int():
+	if not $VBoxContainer/TaskLengthInput.text.is_valid_int():
 		level_label.text = "Please enter a valid number."
 		return
 
-	var task_length = int(Global.task_length_input.text)
-	var tasks_left = Global.tasks_total - Global.tasks_completed
-
-	var tasks_completed_value = round(task_length * 0.333)
-	var points = tasks_completed_value
-	var next_level = 10.0
-
-	while points >= next_level:
-		Global.level += 1
-		next_level *= 1.2
+	
+	Global.task_length_input = int($VBoxContainer/TaskLengthInput.text)
 
 	level_label.text = Global.username + " is level " + str(Global.level) + "!"
-	tasks_left_label.text = "Tasks left: " + str(tasks_left)
 	
 	username_on = false
 	
@@ -58,7 +49,6 @@ func _on_new_task_button_pressed() -> void:
 	username_input.hide()
 	$NewTaskButton.hide()
 	$VBoxContainer/NextButton.hide()
-	Global.task_length_input.text = ""
+	$VBoxContainer/TaskLengthInput.text = ""
 	$VBoxContainer/TaskNameInput.text = ""
 	$VBoxContainer/LevelLabel.text = "Level will appear here."
-	$VBoxContainer/TasksLeftLabel.text = "Tasks remaining will appear here"
