@@ -1,8 +1,12 @@
 [gd_scene format=3 uid="uid://eeviyqx8rvh"]
 
 [ext_resource type="Texture2D" uid="uid://clfg7wnuiol72" path="res://Images/key.png" id="1_wtcfe"]
+<<<<<<< HEAD
 [ext_resource type="Script" uid="uid://dr2ha0ogldd0o" path="res://progress_bar.gd" id="2_epypp"]
 [ext_resource type="PackedScene" uid="uid://c2htgiqef43wa" path="res://xp_bar.tscn" id="3_epypp"]
+=======
+[ext_resource type="Script" uid="uid://bydcd32s3idfx" path="res://control.gd" id="2_0e48y"]
+>>>>>>> 51e71252ecd22414f24a0526f7574beaf6b891fc
 
 [node name="Key" type="Node2D" unique_id=198253035]
 
@@ -10,7 +14,16 @@
 position = Vector2(593, 373)
 texture = ExtResource("1_wtcfe")
 
+<<<<<<< HEAD
 [node name="Progress Bar" type="Node2D" parent="." unique_id=1741354005]
 script = ExtResource("2_epypp")
 
 [node name="XPBar" parent="." unique_id=778914665 instance=ExtResource("3_epypp")]
+=======
+[node name="Control" type="Control" parent="." unique_id=2066935713]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_0e48y")
+>>>>>>> 51e71252ecd22414f24a0526f7574beaf6b891fc
