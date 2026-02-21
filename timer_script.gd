@@ -1,4 +1,4 @@
-extends Control
+extends CanvasLayer
 
 @onready var timer = $CountdownTimer
 @onready var time_label = $TimeLabel
@@ -28,7 +28,8 @@ func _process(delta):
 		var mins = total_seconds / 60
 		var secs = total_seconds % 60
 		time_label.text = "%02d:%02d" % [mins, secs]
+	$TimerBar.value = int(timer.time_left)
 
 func _on_timer_finished():
 	time_label.text = "Done!"
-	print("Points:", points)
+	$"../LevelContainerUI/Example".show()

@@ -38,7 +38,6 @@ text = "Calculate"
 
 [node name="LevelLabel" type="Label" parent="VBoxContainer" unique_id=635707030]
 layout_mode = 2
-text = "Level will appear here."
 
 [node name="NextButton" type="Button" parent="VBoxContainer" unique_id=271489919]
 visible = false
@@ -46,6 +45,7 @@ layout_mode = 2
 text = "Next"
 
 [node name="NewTaskButton" type="Button" parent="." unique_id=1210107233]
+visible = false
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0

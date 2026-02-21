@@ -2,29 +2,47 @@
 
 [ext_resource type="Script" uid="uid://clus76rxqo3kj" path="res://timer_script.gd" id="1_7jo7d"]
 
-[node name="Node" type="Control" unique_id=100528274]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7jo7d"]
+bg_color = Color(0.6380049, 1.0747417, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2p01c"]
+
+[node name="Node" type="CanvasLayer" unique_id=2017450536]
 script = ExtResource("1_7jo7d")
 
 [node name="CountdownTimer" type="Timer" parent="." unique_id=1391503663]
 one_shot = true
 
 [node name="TimeLabel" type="Label" parent="." unique_id=837122245]
-layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -169.0
-offset_bottom = 214.0
+offset_left = -189.0
+offset_top = -92.0
+offset_right = -20.0
+offset_bottom = 122.0
 grow_horizontal = 0
-theme_override_colors/font_color = Color(0.03910804, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 14.948135, 15.441137, 1)
 theme_override_colors/font_outline_color = Color(1, 0.9804955, 0.978059, 1)
 theme_override_font_sizes/font_size = 60
 text = "Timer"
 horizontal_alignment = 2
 vertical_alignment = 2
+
+[node name="TimerBar" type="ProgressBar" parent="." unique_id=44576236]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -66.0
+offset_top = -192.0
+offset_right = 423.4956
+offset_bottom = -165.0
+grow_horizontal = 0
+grow_vertical = 2
+rotation = 1.5707964
+theme_override_styles/background = SubResource("StyleBoxFlat_7jo7d")
+theme_override_styles/fill = SubResource("StyleBoxFlat_2p01c")
+value = 50.0
+show_percentage = false

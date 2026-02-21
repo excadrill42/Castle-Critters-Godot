@@ -4,7 +4,7 @@ extends CanvasLayer
 @onready var calculate_button = $VBoxContainer/CalculateButton
 @onready var level_label = $VBoxContainer/LevelLabel
 @onready var username_on = true
-@onready var timer_overlay = $"../Control"
+@onready var timer_overlay = $"../Node"
 
 
 
@@ -46,6 +46,7 @@ func _on_calculate_pressed():
 	
 	Global.task_length_input = int($VBoxContainer/TaskLengthInput.text)
 	Global.task_name = $VBoxContainer/TaskNameInput.text
+	$"../Node/TimerBar".max_value = Global.task_length_input * 60
 
 	level_label.text = Global.username + " is level " + str(Global.level) + "!"
 	
@@ -53,13 +54,11 @@ func _on_calculate_pressed():
 	
 	get_node("VBoxContainer/NextButton").show()
 	get_node("VBoxContainer/CalculateButton").hide()
-	
 
 
 
 func _on_next_button_pressed() -> void:
 	get_node("VBoxContainer").hide()
-	$NewTaskButton.show()
 
 
 func _on_new_task_button_pressed() -> void:
@@ -70,4 +69,4 @@ func _on_new_task_button_pressed() -> void:
 	$VBoxContainer/NextButton.hide()
 	$VBoxContainer/TaskLengthInput.text = ""
 	$VBoxContainer/TaskNameInput.text = ""
-	$VBoxContainer/LevelLabel.text = "Level will appear here."
+	$VBoxContainer/LevelLabel.text = ""

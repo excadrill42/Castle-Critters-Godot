@@ -35,3 +35,5 @@ func level_up():
 
 func _on_example_pressed() -> void:
 	task_completed()
+	$Example.hide()
+	$"../MainUI"._on_new_task_button_pressed()
