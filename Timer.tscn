@@ -25,7 +25,6 @@ grow_horizontal = 0
 theme_override_colors/font_color = Color(0, 14.948135, 15.441137, 1)
 theme_override_colors/font_outline_color = Color(1, 0.9804955, 0.978059, 1)
 theme_override_font_sizes/font_size = 60
-text = "Timer"
 horizontal_alignment = 2
 vertical_alignment = 2
 
@@ -44,5 +43,4 @@ grow_vertical = 2
 rotation = 1.5707964
 theme_override_styles/background = SubResource("StyleBoxFlat_7jo7d")
 theme_override_styles/fill = SubResource("StyleBoxFlat_2p01c")
-value = 50.0
 show_percentage = false

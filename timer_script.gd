@@ -9,7 +9,7 @@ var points = 1
 var points_to_be
 
 func _ready():
-
+	$TimerBar.value = $TimerBar.max_value
 	timer.one_shot = true
 	timer.timeout.connect(_on_timer_finished)
 func start_timer(minutes: int):
@@ -28,7 +28,7 @@ func _process(delta):
 		var mins = total_seconds / 60
 		var secs = total_seconds % 60
 		time_label.text = "%02d:%02d" % [mins, secs]
-	$TimerBar.value = int(timer.time_left)
+		$TimerBar.value = int(timer.time_left)
 
 func _on_timer_finished():
 	time_label.text = "Done!"

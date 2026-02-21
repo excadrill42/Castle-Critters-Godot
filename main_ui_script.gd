@@ -14,8 +14,6 @@ func _ready():
 		$NewTaskButton.hide()
 		if (username_on == false):
 			$VBoxContainer/UsernameInput.hide()
-		
-		calculate_button.pressed.connect(_on_start_pressed)
 
 func _on_start_pressed():
 	var minutes = int($VBoxContainer/TaskLengthInput.text)
@@ -24,16 +22,10 @@ func _on_start_pressed():
 func _on_calculate_pressed():
 	if (username_on == true):
 		Global.username = username_input.text.strip_edges()
-	var minutes = int($VBoxContainer/TaskLengthInput.text)
-		
-	if minutes <= 0:
-		minutes = 1
 	
-	Global.task_length_input = minutes
 	if Global.username == "":
 		level_label.text = "Please enter a username."
 		return
-
 
 	if not $VBoxContainer/TaskLengthInput.text.is_valid_int():
 		level_label.text = "Please enter a valid number."
@@ -42,7 +34,14 @@ func _on_calculate_pressed():
 	if ($VBoxContainer/TaskNameInput.text.length() > 20):
 		level_label.text = "Please enter a task name less than 20 characters."
 		return
-
+	
+	var minutes = int($VBoxContainer/TaskLengthInput.text)
+		
+	if minutes <= 0:
+		minutes = 1
+	
+	Global.task_length_input = minutes
+	_on_start_pressed()
 	
 	Global.task_length_input = int($VBoxContainer/TaskLengthInput.text)
 	Global.task_name = $VBoxContainer/TaskNameInput.text
