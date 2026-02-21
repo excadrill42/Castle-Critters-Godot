@@ -10,6 +10,8 @@ extends CanvasLayer
 func _ready():
 		print(calculate_button)
 		calculate_button.pressed.connect(_on_calculate_pressed)
+		if (username_on == false):
+			$VBoxContainer/UsernameInput.hide()
 		
 func _on_calculate_pressed():
 	if (username_on == true):
@@ -37,6 +39,8 @@ func _on_calculate_pressed():
 
 	level_label.text = Global.username + " is level " + str(Global.level) + "!"
 	tasks_left_label.text = "Tasks left: " + str(tasks_left)
+	
+	username_on = false
 	
 	get_node("VBoxContainer/NextButton").show()
 
