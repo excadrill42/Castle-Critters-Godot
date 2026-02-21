@@ -10,8 +10,15 @@ extends CanvasLayer
 func _ready():
 		print(calculate_button)
 		calculate_button.pressed.connect(_on_calculate_pressed)
+<<<<<<< HEAD
 		$NewTaskButton.hide()
 		
+=======
+		if (username_on == false):
+			$VBoxContainer/UsernameInput.hide()
+		timer.timeout.connect(_on_timer_finished)
+
+>>>>>>> e07a768b72288dd765b04309748319e307dca2eb
 func _on_calculate_pressed():
 	if (username_on == true):
 		Global.username = username_input.text.strip_edges()
@@ -42,7 +49,21 @@ func _on_calculate_pressed():
 	username_on = false
 	
 	get_node("VBoxContainer/NextButton").show()
+<<<<<<< HEAD
 	get_node("VBoxContainer/CalculateButton").hide()
+=======
+	
+
+@onready var timer = $CountdownTimer
+@onready var next_button = $VBoxContainer/NextButton
+
+
+func start_from_input(seconds: int):
+	timer.start(seconds)
+
+func _on_timer_finished():
+	next_button.show()
+>>>>>>> e07a768b72288dd765b04309748319e307dca2eb
 
 
 func _on_next_button_pressed() -> void:
