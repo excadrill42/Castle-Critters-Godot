@@ -13,10 +13,11 @@ func _update_label() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	$Label2.text = "Current Task: " + Global.task_name
 
 func task_completed():
 	current_xp += Global.task_length_input
+	Global.task_length_input = 0
 	if (current_xp >= xp_needed):
 		level_up()
 	else:

@@ -21,7 +21,6 @@ func _on_calculate_pressed():
 		minutes = 1
 	
 	Global.task_length_input = minutes
-	get_tree().change_scene_to_file("res://Timer.tscn")
 	if Global.username == "":
 		level_label.text = "Please enter a username."
 		return
@@ -30,9 +29,14 @@ func _on_calculate_pressed():
 	if not $VBoxContainer/TaskLengthInput.text.is_valid_int():
 		level_label.text = "Please enter a valid number."
 		return
+	
+	if ($VBoxContainer/TaskNameInput.text.length() > 20):
+		level_label.text = "Please enter a task name less than 20 characters."
+		return
 
 	
 	Global.task_length_input = int($VBoxContainer/TaskLengthInput.text)
+	Global.task_name = $VBoxContainer/TaskNameInput.text
 
 	level_label.text = Global.username + " is level " + str(Global.level) + "!"
 	

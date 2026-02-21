@@ -41,4 +41,11 @@ offset_right = 973.0
 offset_bottom = 54.0
 text = "Complete Task"
 
+[node name="Label2" type="Label" parent="." unique_id=1160284176]
+offset_left = 10.0
+offset_top = 25.0
+offset_right = 114.0
+offset_bottom = 48.0
+text = "Current Task:"
+
 [connection signal="pressed" from="Example" to="." method="_on_example_pressed"]
