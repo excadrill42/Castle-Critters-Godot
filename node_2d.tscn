@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://eeviyqx8rvh"]
+
+[ext_resource type="Texture2D" uid="uid://clfg7wnuiol72" path="res://key.png" id="1_wtcfe"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_0e48y"]
+
+[node name="Node2D" type="Node2D" unique_id=198253035]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=193454267]
+texture = SubResource("ViewportTexture_0e48y")
+
+[node name="Key" type="Sprite2D" parent="." unique_id=969144260]
+position = Vector2(593, 373)
+texture = ExtResource("1_wtcfe")
