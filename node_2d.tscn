@@ -1,17 +1,7 @@
-[gd_scene format=3 uid="uid://eeviyqx8rvh"]
+[gd_scene format=3 uid="uid://dx7c31s02h56i"]
 
-[ext_resource type="Texture2D" uid="uid://clfg7wnuiol72" path="res://Images/key.png" id="1_wtcfe"]
-[ext_resource type="Script" uid="uid://bydcd32s3idfx" path="res://control.gd" id="2_0e48y"]
+[node name="Node2D" type="Node2D" unique_id=1808885407]
 
-[node name="Key" type="Node2D" unique_id=198253035]
-
-[node name="Key" type="Sprite2D" parent="." unique_id=969144260]
-position = Vector2(593, 373)
-texture = ExtResource("1_wtcfe")
-
-[node name="Control" type="Control" parent="." unique_id=2066935713]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("2_0e48y")
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=1864545630]
+offset_right = 4.0
+offset_bottom = 27.0
