@@ -53,6 +53,7 @@ func _on_calculate_pressed():
 	
 	get_node("VBoxContainer/NextButton").show()
 	get_node("VBoxContainer/CalculateButton").hide()
+	$Username.text = Global.username
 
 
 

@@ -16,6 +16,7 @@ func change_to_background_2():
 
 func change_to_background_3():
 	$Background.texture = load("res://Images/Background_house&Cows.png")
+	$"Animation Scene/Cow".show()
 
 
 func _on_countdown_timer_timeout() -> void:

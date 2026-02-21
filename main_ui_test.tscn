@@ -55,5 +55,16 @@ grow_vertical = 0
 size_flags_horizontal = 4
 text = "New Task"
 
+[node name="Username" type="Label" parent="." unique_id=1823366753]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = -48.0
+offset_right = 50.0
+offset_bottom = -25.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 24
+
 [connection signal="pressed" from="VBoxContainer/NextButton" to="." method="_on_next_button_pressed"]
 [connection signal="pressed" from="NewTaskButton" to="." method="_on_new_task_button_pressed"]
