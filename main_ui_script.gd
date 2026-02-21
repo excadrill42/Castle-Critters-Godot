@@ -4,6 +4,9 @@ extends CanvasLayer
 @onready var calculate_button = $VBoxContainer/CalculateButton
 @onready var level_label = $VBoxContainer/LevelLabel
 @onready var username_on = true
+@onready var timer_overlay = $"../Control"
+
+
 
 func _ready():
 		print(calculate_button)
@@ -11,7 +14,13 @@ func _ready():
 		$NewTaskButton.hide()
 		if (username_on == false):
 			$VBoxContainer/UsernameInput.hide()
+		
+		calculate_button.pressed.connect(_on_start_pressed)
 
+func _on_start_pressed():
+	var minutes = int($VBoxContainer/TaskLengthInput.text)
+	timer_overlay.start_timer(minutes)
+	
 func _on_calculate_pressed():
 	if (username_on == true):
 		Global.username = username_input.text.strip_edges()

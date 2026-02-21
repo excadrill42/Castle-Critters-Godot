@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://bv6r5x26wt58k"]
 
 [ext_resource type="Script" uid="uid://dq78k50cjtbfy" path="res://main.gd" id="1_1bvp3"]
-[ext_resource type="PackedScene" uid="uid://dj11t1dlejvxp" path="res://animation_scene.tscn" id="2_0xm2m"]
-[ext_resource type="PackedScene" uid="uid://d0jo0pbcp1rgt" path="res://level_container_ui.tscn" id="3_1bvp3"]
+[ext_resource type="PackedScene" path="res://animation_scene.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" path="res://level_container_ui.tscn" id="3_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://bb8l5daew2v2s" path="res://main_ui_test.tscn" id="3_h2yge"]
+[ext_resource type="Script" uid="uid://clus76rxqo3kj" path="res://timer_script.gd" id="5_lquwl"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ig7tw"]
 load_path = "res://.godot/imported/pixil-frame-0 (1).png-5962cef2b3fe40c54bcf0b5898b7f045.ctex"
@@ -23,5 +24,27 @@ position = Vector2(576.00006, 266.00003)
 scale = Vector2(1.35, 1.35)
 texture = SubResource("CompressedTexture2D_ig7tw")
 metadata/_edit_lock_ = true
+
+[node name="Control" type="Control" parent="." unique_id=1645737480]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("5_lquwl")
+
+[node name="TimeLabel" type="Label" parent="Control" unique_id=1563141940]
+layout_mode = 0
+offset_left = 916.0
+offset_top = 196.0
+offset_right = 1054.0
+offset_bottom = 290.0
+theme_override_colors/font_color = Color(0.11372549, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 70
+text = "Timer"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CountdownTimer" type="Timer" parent="Control" unique_id=1895645926]
 
 [node name="LevelContainerUI" parent="." unique_id=725558928 instance=ExtResource("3_1bvp3")]
