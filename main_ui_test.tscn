@@ -38,3 +38,10 @@ text = "Level will appear here."
 [node name="TasksLeftLabel" type="Label" parent="VBoxContainer" unique_id=1268204252]
 layout_mode = 2
 text = "Tasks remaining will appear here"
+
+[node name="NextButton" type="Button" parent="VBoxContainer" unique_id=271489919]
+visible = false
+layout_mode = 2
+text = "Next"
+
+[connection signal="pressed" from="VBoxContainer/NextButton" to="." method="_on_next_button_pressed"]
